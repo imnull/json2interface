@@ -1,0 +1,32 @@
+{
+  "name": "@imnull/json2interface",
+  "version": "1.0.0",
+  "description": "Convert JSON file to typescript interface for ArkTS",
+  "main": "./dist/src/index.js",
+  "bin": {
+    "j2i": "./dist/src/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc ./src/cli.ts -t es5 -d -m commonjs --outDir dist --resolveJsonModule --esModuleInterop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/imnull/json2interface.git"
+  },
+  "keywords": [
+    "json",
+    "typescript",
+    "interface"
+  ],
+  "author": "imnull@outlook.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imnull/json2interface/issues"
+  },
+  "homepage": "https://github.com/imnull/json2interface#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}

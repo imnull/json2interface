@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+*.log
+*.zip
+*.tar
+package-lock.json
+yarn.lock
+dist
