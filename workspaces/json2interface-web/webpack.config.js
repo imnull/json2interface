@@ -35,7 +35,7 @@ module.exports = (options) => {
         mode: WEBPACK_SERVE ? 'development' : 'production',
         entry: './src/index.tsx',
         output: {
-            path: path.resolve('public'),
+            path: path.resolve(__dirname, '../../public'),
             // library: {
             //     type: 'window',
             //     name: '$fpc',
