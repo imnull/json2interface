@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Convert JSON file to typescript interface for ArkTS",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "upload": "ossc updir docs fetools/json2interface"
   },
   "repository": {
     "type": "git",

@@ -5,8 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack serve",
-    "build": "webpack",
-    "upload": "ossc updir dist fetools/json2interface"
+    "build": "webpack"
   },
   "devDependencies": {
     "@babel/core": "^7.24.7",
