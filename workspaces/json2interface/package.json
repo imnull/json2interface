@@ -1,5 +1,5 @@
 {
-  "name": "json2interface",
+  "name": "@imnull/json2interface",
   "version": "1.0.0",
   "description": "Convert JSON file to typescript interface for ArkTS",
   "main": "./dist/src/index.js",
@@ -30,7 +30,6 @@
     "typescript": "^5.5.3"
   },
   "workspaces": [
-    "workspaces/*"
-  ],
-  "private": true
+    "./workspaces/*"
+  ]
 }
