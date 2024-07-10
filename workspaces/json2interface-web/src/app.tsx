@@ -76,7 +76,7 @@ export default () => {
                     }}
                 >复制代码</button>
             </div>
-            <SyntaxHighlighter language="typescript">{code}</SyntaxHighlighter>
+            <SyntaxHighlighter className="markdown" language="typescript">{code}</SyntaxHighlighter>
         </div>
     </div>
 }
