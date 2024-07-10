@@ -6,21 +6,21 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const PORT = 3001
 
 module.exports = (options) => {
-    const { WEBPACK_SERVE, entry } = options
-    const template = entry === 'app' ? path.resolve('template-app.html') : WEBPACK_SERVE ? path.resolve('template.html') : path.resolve('build-template.html')
-    const entryPath = entry === 'app' ? path.resolve('src/index.tsx') : path.resolve('src/main.ts')
+    const { WEBPACK_SERVE } = options
 
     const babelEsRule = {
         loader: 'babel-loader',
         options: {
             presets: [
-                "@babel/preset-env",
                 '@babel/preset-typescript',
+                '@babel/preset-env',
+                ['@babel/preset-react', { runtime: 'automatic' }],
             ],
             plugins: [
-                '@babel/plugin-transform-runtime',
-                '@babel/plugin-transform-regenerator',
-                '@babel/plugin-transform-modules-commonjs',
+                // ['@babel/plugin-transform-react-jsx', { pragma: 'React' }],
+                // '@babel/plugin-transform-runtime',
+                // '@babel/plugin-transform-regenerator',
+                // '@babel/plugin-transform-modules-commonjs',
             ],
         }
     }

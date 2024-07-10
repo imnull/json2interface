@@ -1,11 +1,8 @@
 import { parse } from '@imnull/json2interface'
 import { useState } from 'react'
 import Markdown from 'react-markdown'
+import SyntaxHighlighter from 'react-syntax-highlighter'
 import './app.scss'
-
-const formatCode = (code: string) => {
-    return '```ts\n' + code + '\n```'
-}
 
 const defaultData = {
     name: "marvin",
@@ -40,7 +37,7 @@ export default () => {
 
     const [json, setJson] = useState(JSON.stringify(defaultData, null, '  '))
     const [name, setName] = useState(defaultName)
-    const [markdown, setMarkdown] = useState(parse(name, JSON.parse(json)))
+    const [code, setCode] = useState(parse(name, defaultData))
 
     return <div className="app">
         <div className="wrap left">
@@ -65,21 +62,21 @@ export default () => {
                     onClick={() => {
                         try {
                             const result = parse(name, JSON.parse(json))
-                            setMarkdown(result)
+                            setCode(result)
                         } catch (e: any) {
-                            setMarkdown(`parse error: ${e.message}`)
+                            setCode(`parse error: ${e.message}`)
                         }
                     }}
                 >转换为接口</button>
                 <button
                     className="btn"
                     onClick={() => {
-                        navigator.clipboard.writeText(markdown)
+                        navigator.clipboard.writeText(code)
                         alert('复制成功')
                     }}
                 >复制代码</button>
             </div>
-            <Markdown className="markdown">{formatCode(markdown)}</Markdown>
+            <SyntaxHighlighter language="typescript">{code}</SyntaxHighlighter>
         </div>
     </div>
 }
