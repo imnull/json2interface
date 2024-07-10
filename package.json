@@ -2,13 +2,8 @@
   "name": "json2interface",
   "version": "1.0.0",
   "description": "Convert JSON file to typescript interface for ArkTS",
-  "main": "./dist/src/index.js",
-  "bin": {
-    "j2i": "./dist/src/cli.js"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc ./src/cli.ts -t es5 -d -m commonjs --outDir dist --resolveJsonModule --esModuleInterop"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",

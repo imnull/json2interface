@@ -19,10 +19,10 @@ jobs:
           node-version: '14'
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --prefix ./workspaces/json2interface-web
 
       - name: Build json2interface-web
-        run: npm run build --workspace=json2interface-web
+        run: npm run build --prefix ./workspaces/json2interface-web
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
